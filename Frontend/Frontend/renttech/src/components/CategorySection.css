@@ -1,0 +1,75 @@
+.categorySectionContainer {
+  margin: 60px auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.categorySectionToggleButton {
+  font-size: 24px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  color: #00eaff;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  transition: color 0.3s;
+}
+
+.categorySectionToggleButton:hover {
+  color: #4df2ff;
+}
+
+.categorySectionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+
+.categorySectionContent.open {
+  max-height: 1000px;
+}
+
+.categorySectionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.categorySectionGrid.visible {
+  opacity: 1;
+}
+
+.categorySectionGrid.hidden {
+  opacity: 0;
+}
+
+.categorySectionCard {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.categorySectionCard:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.categorySectionIcon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}

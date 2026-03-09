@@ -1,0 +1,186 @@
+.userBookings {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: white;
+}
+
+.userBookings h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #00eaff;
+}
+
+.bookingsOverview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.overviewCard {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.overviewCard h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #b0bec5;
+}
+
+.overviewCard .count {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #00eaff;
+}
+
+.bookingsSection {
+  margin-bottom: 40px;
+}
+
+.bookingsSection h2 {
+  border-bottom: 2px solid #00eaff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.noBookings {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: #b0bec5;
+}
+
+.bookingsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bookingCard {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  border-left: 4px solid #00eaff;
+}
+
+.bookingCard.past {
+  opacity: 0.7;
+  border-left-color: #b0bec5;
+}
+
+.bookingHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.bookingHeader h3 {
+  margin: 0;
+  color: #00eaff;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status.függőben {
+  background: #ff9800;
+  color: white;
+}
+
+.status.megerősített {
+  background: #4caf50;
+  color: white;
+}
+
+.status.teljesítve {
+  background: #2196f3;
+  color: white;
+}
+
+.status.lemondva {
+  background: #f44336;
+  color: white;
+}
+
+.bookingDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.bookingDetails p {
+  margin: 5px 0;
+  color: #b0bec5;
+}
+
+.bookingDetails strong {
+  color: white;
+}
+
+.bookingActions {
+  text-align: right;
+}
+
+.cancelButton {
+  padding: 8px 16px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.cancelButton:hover {
+  background: #d32f2f;
+}
+
+.loading {
+  text-align: center;
+  padding: 100px;
+  color: white;
+  font-size: 18px;
+}
+
+.notLoggedIn {
+  text-align: center;
+  padding: 100px;
+  color: white;
+}
+
+.notLoggedIn h2 {
+  color: #ff9800;
+}
+
+/* Reszponzív design */
+@media (max-width: 768px) {
+  .bookingsOverview {
+    grid-template-columns: 1fr;
+  }
+  
+  .bookingHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .bookingDetails {
+    grid-template-columns: 1fr;
+  }
+}

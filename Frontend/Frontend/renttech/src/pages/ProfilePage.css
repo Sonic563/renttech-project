@@ -1,0 +1,106 @@
+.profilePageContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.profileFormWrapper {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.6s ease;
+}
+
+.profileTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #00eaff;
+}
+
+.profileInfo {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.infoRow:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.infoLabel {
+  color: #b0bec5;
+  font-size: 14px;
+}
+
+.infoValue {
+  font-weight: 500;
+}
+
+.roleBadge {
+  background: #00eaff;
+  color: #0f2027;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profileForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formInput.readonly {
+  background: rgba(255, 255, 255, 0.05);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.readonlyHint {
+  color: #b0bec5;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.profileButton {
+  padding: 14px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.profileButton:hover {
+  background: #42a5f5;
+}
+
+.profileButton:disabled {
+  background: #555;
+  cursor: not-allowed;
+}

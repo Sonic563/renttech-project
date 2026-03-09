@@ -1,0 +1,188 @@
+.navbar {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbarContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbarCenter {
+  flex: 1;
+  max-width: 500px;
+}
+
+.navbarRight {
+  display: flex;
+  align-items: center;
+}
+
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.navbarBrand {
+  color: #00eaff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.navbarBrand:hover {
+  color: #4df2ff;
+}
+
+.navbarMenu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbarLink {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.navbarLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #00eaff;
+}
+
+.cartLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #f44336;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminLink {
+  background: rgba(156, 39, 176, 0.2);
+  color: #9c27b0;
+}
+
+.adminLink:hover {
+  background: rgba(156, 39, 176, 0.3);
+}
+
+.navbarButton {
+  padding: 8px 16px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.navbarButton:hover {
+  background: #00d4f0;
+}
+
+.navbarButton.register {
+  background: #4caf50;
+}
+
+.navbarButton.register:hover {
+  background: #66bb6a;
+}
+
+.navbarWelcome {
+  color: #b0bec5;
+  font-size: 12px;
+  white-space: nowrap;
+  padding: 0 10px;
+}
+
+/* Reszponzív design */
+@media (max-width: 1024px) {
+  .navbarContainer {
+    flex-wrap: wrap;
+  }
+  
+  .navbarCenter {
+    order: 3;
+    flex: 1 100%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobileMenuButton {
+    display: block;
+  }
+  
+  .navbarMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+  }
+  
+  .navbarMenu.mobileVisible {
+    display: flex;
+  }
+  
+  .navbarRight {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .navbarMenu {
+    width: 100%;
+  }
+}

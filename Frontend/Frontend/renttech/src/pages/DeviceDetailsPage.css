@@ -1,0 +1,45 @@
+.deviceDetailsPageH2 {
+    padding: 40px;
+}
+
+.deviceDetailsPageFirstDiv {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: white;
+}
+
+.deviceDetailsPageImage {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.deviceDetailsPageDescription {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.deviceDetailsPageRentalFee {
+    margin-bottom: 20px;
+}
+
+.deviceDetailsPageFtDay {
+    color: #00eaff;
+}
+
+.deviceDetailsPageButton {
+    padding: 14px 28px;
+    background: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.deviceDetailsPageButton:hover {
+    background: #00d4f0;
+}
