@@ -1,0 +1,68 @@
+.registerPageContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.registerFormWrapper {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.6s ease;
+}
+
+.registerTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #00eaff;
+}
+
+.successMessage {
+  background: rgba(0, 255, 0, 0.2);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  color: #4caf50;
+  padding: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.registerButton {
+  padding: 14px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.registerButton:hover {
+  background: #66bb6a;
+}
+
+.registerButton:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+.registerLinks {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+}

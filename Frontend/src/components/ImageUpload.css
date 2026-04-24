@@ -1,0 +1,152 @@
+.iu-root {
+  margin: 14px 0 10px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.iu-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.iu-title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.iu-subtitle {
+  font-size: 13px;
+  opacity: 0.8;
+  max-width: 70%;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.iu-body {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.iu-preview {
+  width: 220px;
+  height: 150px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iu-previewImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.iu-previewEmpty {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.iu-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.iu-fileInput {
+  display: none;
+}
+
+.iu-pickButton {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 700;
+  background: rgba(0, 234, 255, 0.18);
+  color: #00eaff;
+  border: 1px solid rgba(0, 234, 255, 0.25);
+  transition: 0.2s ease;
+}
+
+.iu-pickButton:hover {
+  background: rgba(0, 234, 255, 0.26);
+}
+
+.iu-actionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.iu-btn {
+  border: 0;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.10);
+  color: white;
+  transition: 0.2s ease;
+}
+
+.iu-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.iu-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.iu-btnPrimary {
+  background: #00bcd4;
+  color: #0f2027;
+}
+
+.iu-btnPrimary:hover {
+  background: #00d4f0;
+}
+
+.iu-btnDanger {
+  background: rgba(255, 80, 80, 0.18);
+  border: 1px solid rgba(255, 80, 80, 0.25);
+}
+
+.iu-btnDanger:hover {
+  background: rgba(255, 80, 80, 0.28);
+}
+
+.iu-hint {
+  font-size: 13px;
+  opacity: 0.8;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .iu-body {
+    grid-template-columns: 1fr;
+  }
+
+  .iu-preview {
+    width: 100%;
+    height: 180px;
+  }
+
+  .iu-subtitle {
+    max-width: 55%;
+  }
+}

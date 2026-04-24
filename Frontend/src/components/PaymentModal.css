@@ -1,0 +1,241 @@
+.paymentOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+}
+
+
+.paymentModal {
+  width: min(520px, 100%);
+  max-height: min(82vh, 760px);
+  overflow: auto;
+  background: rgba(20, 24, 28, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 22px 22px 18px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+  animation: slideUp 0.22s ease;
+  color: white;
+}
+
+.paymentModal::-webkit-scrollbar {
+  width: 10px;
+}
+.paymentModal::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+}
+.paymentModal::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+
+.paymentModal h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.paymentPrice {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0 0 14px;
+  color: #00eaff;
+}
+
+
+.paymentModal label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+
+.paymentModal input,
+.paymentModal select,
+.paymentModal textarea {
+  width: 100%;
+  padding: 12px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.07);
+  color: white;
+  font-size: 15px;
+  transition: 0.2s ease;
+  outline: none;
+}
+
+.paymentModal textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+
+.paymentModal input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+.paymentModal input:focus,
+.paymentModal select:focus,
+.paymentModal textarea:focus {
+  border-color: rgba(0, 234, 255, 0.7);
+  box-shadow: 0 0 0 3px rgba(0, 234, 255, 0.16);
+  background: rgba(255, 255, 255, 0.10);
+}
+
+
+.paymentModal select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 44px;
+}
+
+
+.paymentRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 520px) {
+  .paymentRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.payButton {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  background: linear-gradient(135deg, #00eaff, #1b5cff);
+  color: #071a1f;
+  border: none;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.payButton:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.closeButton {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  transition: 0.15s ease;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+
+.paymentLoading {
+  margin-top: 16px;
+  text-align: center;
+  font-weight: 900;
+  color: #00eaff;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.paymentModal.selectOpen {
+  overflow: visible;
+}
+
+.paymentModal select {
+  position: relative;
+  z-index: 2;
+}
+.modalSelect {
+  position: relative;
+  width: 100%;
+}
+
+.modalSelectButton {
+  width: 100%;
+  padding: 12px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.07);
+  color: white;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.modalSelectButton:focus {
+  outline: none;
+  border-color: rgba(0, 234, 255, 0.7);
+  box-shadow: 0 0 0 3px rgba(0, 234, 255, 0.16);
+}
+
+.modalSelectChevron {
+  opacity: 0.9;
+  transition: transform 0.15s ease;
+}
+.modalSelectChevron.open {
+  transform: rotate(180deg);
+}
+
+.modalSelectMenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 99999;
+  background: rgba(20, 24, 28, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 6px;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.6);
+}
+
+.modalSelectItem {
+  width: 100%;
+  text-align: left;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  font-weight: 700;
+}
+
+.modalSelectItem:hover {
+  background: rgba(0, 234, 255, 0.14);
+}
+
+.modalSelectItem.active {
+  background: rgba(0, 234, 255, 0.22);
+  border: 1px solid rgba(0, 234, 255, 0.25);
+}

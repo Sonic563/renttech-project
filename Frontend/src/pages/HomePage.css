@@ -1,0 +1,145 @@
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.homePageContainer {
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.homePageTitle {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.homePageSubtitle {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.homePageFeaturedTitle {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+
+.homePageDevicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  gap: 30px;
+  margin-top: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homePageDevicesGrid .dc-card {
+  width: 100%;
+}
+
+
+.homePageDevicesGrid .dc-imageContainer {
+  height: 220px;
+}
+
+.homePageDevicesGrid .dc-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.homePageBrowseButton {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 28px;
+  background: #00bcd4;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.homePageBrowseButton:hover {
+  background: #00d4f0;
+}
+
+.homePageContactSection {
+  margin-top: 80px;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+.homePageContactInfo {
+  margin: 10px 0;
+}
+
+
+@media (max-width: 1200px) {
+  .homePageDevicesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  }
+}
+
+@media (max-width: 768px) {
+  .homePageTitle {
+    font-size: 36px;
+  }
+
+  .homePageSubtitle {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+
+  .homePageDevicesGrid {
+    gap: 20px;
+    padding: 0 10px;
+    grid-template-columns: 1fr; 
+  }
+
+  .homePageBrowseButton {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+
+  .homePageContactSection {
+    padding: 30px 15px;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .homePageContainer {
+    padding: 40px 15px;
+  }
+
+  .homePageTitle {
+    font-size: 28px;
+  }
+
+  .homePageSubtitle {
+    font-size: 16px;
+  }
+
+  .homePageFeaturedTitle {
+    font-size: 22px;
+  }
+
+  .homePageDevicesGrid {
+    gap: 15px;
+  }
+}

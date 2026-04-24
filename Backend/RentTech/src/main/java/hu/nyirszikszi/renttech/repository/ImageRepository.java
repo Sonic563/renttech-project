@@ -1,0 +1,17 @@
+package hu.nyirszikszi.renttech.repository;
+
+import hu.nyirszikszi.renttech.model.Image;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface ImageRepository extends JpaRepository<Image, Long> {
+
+    List<Image> findAllByFileName(String fileName);
+
+    List<Image> findAllByUploadedBy(String uploadedBy);
+
+    List<Image> findAllByContentType(String contentType);
+}

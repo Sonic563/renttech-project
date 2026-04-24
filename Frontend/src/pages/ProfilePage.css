@@ -1,0 +1,102 @@
+.profilePageContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.profilePageContainer .profileFormWrapper {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.6s ease;
+}
+
+.profilePageContainer .profileTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #00eaff;
+}
+
+.profilePageContainer .profileInfo {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.profilePageContainer .infoRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profilePageContainer .infoRow:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.profilePageContainer .infoLabel {
+  color: #b0bec5;
+  font-size: 14px;
+}
+
+.profilePageContainer .infoValue {
+  font-weight: 500;
+}
+
+.profilePageContainer .roleBadge {
+  background: #00eaff;
+  color: #0f2027;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profilePageContainer .profileForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profilePageContainer .formInput.readonly {
+  background: rgba(255, 255, 255, 0.05);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.profilePageContainer .readonlyHint {
+  color: #b0bec5;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.profilePageContainer .profileButton {
+  padding: 14px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.profilePageContainer .profileButton:hover {
+  background: #42a5f5;
+}
+
+.profilePageContainer .profileButton:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
